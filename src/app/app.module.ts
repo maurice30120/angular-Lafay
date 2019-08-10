@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BoutonMinuteComponent } from './clavier/bouton/bouton-minute/bouton-minute.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoutonMinuteComponent
   ],
   imports: [
     BrowserModule,
