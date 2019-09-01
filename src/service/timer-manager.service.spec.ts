@@ -15,21 +15,12 @@ describe('TimerManagerService', () => {
     let service: TimerManagerService;
     beforeEach(() => {  service  = TestBed.get(TimerManagerService) ; });
 
-    it('#getValue should return 30 Second', () => {
+    it('compte 30 second', () => {
       const deadLine = new Date();
-      deadLine.setSeconds(deadLine.getSeconds() + 30);
-      expect(service.getTimeRemaining(deadLine)).toBe('30');
+      deadLine.setSeconds(deadLine.getSeconds() + 31);
+      service.setTargetTime(deadLine).subscribe(val => expect(val).toBe(0));
     });
 
-    // it('#getObservableValue should return value from observable',
-    //   (done: DoneFn) => {
-    //     service.getObservableValue().subscribe(value => {
-    //       expect(value).toBe('observable value');
-    //       done();
-    //     });
-    //   });
-
- 
   });
 
 
